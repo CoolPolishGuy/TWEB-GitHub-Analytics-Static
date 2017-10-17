@@ -1,0 +1,16 @@
+li {
+  list-style: none;
+  background: #d1703c;
+  color: #fff;
+  height: 0;
+  line-height: 2em;
+  margin: 0;
+  padding: 0 0.5em;
+  overflow: hidden;
+  width: 10em;
+}
+
+li.show {
+  height: 2em;
+  margin: 2px 0;
+}
