@@ -1,18 +1,23 @@
-$(function() {
-    console.log("loading data");
+$(document).ready(() => {
+  const req = new XMLHttpRequest();
 
-    function loadData() {
-      $.getJSON("/api/students/", function (data){
-        console.log(data);
-        var message = "we are the five guys";
-        if(data.length > 0) {
 
-            message = data[0].finalData;
-          
-        }
-        $(".section-heading").text(message);
-      });
-    };
-    loadData();
-    setInterval(loadData, 2000);
+  req.open('GET','https://raw.githubusercontent.com/CoolPolishGuy/TWEB-GitHub-Analytics-Agent/master/data/data.json');
+  req.responseType = 'json';
+ 
+
+  req.onreadystatechange = () => {
+    if(req.readyState === XMLHttpRequest.DONE &&req.status === 200) {
+      
+      const object = req.response;
+      for(let i = 0; i < object.repoCommits.length; i++) {
+        $("table").append(`<tr><td id="repList"> ${object.repoCommits[i].name} </td><td id="reIssues">${object.repoCommits[i].commits} </td></tr>`);
+ 
+        //buildChart(object);
+        
+    }
+    buildChart(object);
+  }
+  };
+  req.send();
 });

@@ -2,15 +2,14 @@ $(function() {
     console.log("loading data");
 
     function loadData() {
-      $.getJSON("/api/students/", function (data){
+      $.getJSON("./file.json", function (data){
         console.log(data);
-        var message = "we are the five guys";
+
         if(data.length > 0) {
 
-            message = data[0].finalData;
-          
         }
-        $(".section-heading").text(message);
+        //$(".section-heading").text(message);
+        
       });
     };
     loadData();

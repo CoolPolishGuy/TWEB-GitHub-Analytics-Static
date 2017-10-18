@@ -19,6 +19,7 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.min.css" rel="stylesheet">
+    <link href="perso.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,29 +64,47 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">The best assignement in this cours</h1>
+                <h1 id="homeHeading" style="
+                color: green;">Github-analytics-Welcome</h1>
                 <hr>
-                <p>Start Bootstrap can help you build better grade using the RES framework! Just download your template and start crying!</p>
+                <p style="
+                color: green;">Here are displayed some information about our some repository in github</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
     </header>
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
-                    <hr class="primary">
-                </div>
+
+    <div class="blue">
+        <section>
+            <h2>View of Information</h2>
+            <p>We have collected some information about some of the most used repestories this year</p>
+        </section>
+        <table>
+            <div class=reposList>
+                <tr>
+                    <th>Name repository</th>
+                    <th>Number of commis</th>
+                </tr>           
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
+        </table>
+    </div>
+
+    <div>
+        <section>
+                <div>
+                    <h2 class="display-4" id="chartTitle2">Commits during the week</h2>
                 </div>
-            </div>
-        </div>
-    </section>
+        </section>
+        <canvas class="chart" id="bar-chart" style="display: block;position: relative;left: 450px;"></canvas>
+        <section>
+                <div>
+                    <h2 class="display-4" id="chartTitle2">Commits during the year by trimseter</h2>
+                </div>
+        </section>
+        <canvas class="chart" id="pie-chart" style="display: block;position: relative;left: 450px;" ></canvas>
+    </div>
+
+
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
@@ -98,15 +117,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
-                    <p>THIS IS A VERY IMPORTANT EXERCICE AND I NEED A GOOD GRADE!</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact" data-sr-id="8" style="; visibility: visible;  -webkit-transform: scale(1); opacity: 1;transform: scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; "></i>
-                    <p>you want my number? good luck with that</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact" data-sr-id="9" style="; visibility: visible;  -webkit-transform: scale(1); opacity: 1;transform: scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; "></i>
-                    <p><a href="mailto:your-email@your-domain.com">www.heig-vd.com</a></p>
+                    <p>Modified by Myszkorowski and Zanone</p>
                 </div>
             </div>
         </div>
@@ -119,13 +130,15 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
     <!-- custom adding data dynamic to page -->
-    <script src="js/dataSend.js"></script
+    <script src="js/dataSend.js"></script>
+    <script src="js/chart.js"></script>
 </body>
 </html>

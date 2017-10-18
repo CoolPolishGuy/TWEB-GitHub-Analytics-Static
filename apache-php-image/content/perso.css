@@ -1,16 +1,19 @@
-li {
-  list-style: none;
-  background: #d1703c;
-  color: #fff;
-  height: 0;
-  line-height: 2em;
-  margin: 0;
-  padding: 0 0.5em;
-  overflow: hidden;
-  width: 10em;
+.chart {
+  width: 50%;
+}
+.blue {
+  background-color: 	rgb(240,248,255);
+
+  padding: 10px;
+}
+td[id=repList] {
+  padding-left: 40px;
+}
+td[id=reIssues] {
+  text-align: center;
 }
 
-li.show {
-  height: 2em;
-  margin: 2px 0;
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
