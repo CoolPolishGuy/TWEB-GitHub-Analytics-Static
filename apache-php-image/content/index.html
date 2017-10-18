@@ -42,15 +42,19 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right" style="
+                color: white, border-color; text-shadow: 0 0 1px black;">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#homeHeading">About</a>
                     </li>
                     <li class="">
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#reposcommits">Repos/Commits</a>
                     </li>
                     <li class="">
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#dow">Days of week</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#trimester">Trimester</a>
                     </li>
                     <li class="">
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -65,22 +69,22 @@
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading" style="
-                color: green;">Github-analytics-Welcome</h1>
+                color: white, border-color; text-shadow: 0 0 5px black;">Github-analytics-Welcome</h1>
                 <hr>
-                <p style="
-                color: green;">Here are displayed some information about our some repository in github</p>
+                <h3 style="
+                color: white; text-shadow: 0 0 5px black;">Here are displayed some information about the most active repositories from the owner youtube on github</h3>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
     </header>
 
-    <div class="blue">
+    <div class="blue" id="reposcommits">
         <section>
             <h2>View of Information</h2>
-            <p>We have collected some information about some of the most used repestories this year</p>
+            <h4>We have collected some information about some of the most used repositories</h4>
         </section>
         <table>
-            <div class=reposList>
+            <div>
                 <tr>
                     <th>Name repository</th>
                     <th>Number of commis</th>
@@ -89,23 +93,22 @@
         </table>
     </div>
 
-    <div>
-        <section>
-                <div>
-                    <h2 class="display-4" id="chartTitle2">Commits during the week</h2>
-                </div>
+    <div class="yellow" id="dow">
+        <section>   
+            <h2>Commits during the days of week</h2>
         </section>
-        <canvas class="chart" id="bar-chart" style="display: block;position: relative;left: 450px;"></canvas>
+        <canvas class="chart" id="bar-chart"></canvas>
+    </div>    
+
+    <div class="red">
         <section>
-                <div>
-                    <h2 class="display-4" id="chartTitle2">Commits during the year by trimseter</h2>
-                </div>
+           <h2>Commits during the year by trimester</h2>    
         </section>
-        <canvas class="chart" id="pie-chart" style="display: block;position: relative;left: 450px;" ></canvas>
+        <canvas class="chart" id="pie-chart"  ></canvas>
     </div>
 
 
-    <section class="no-padding" id="portfolio">
+    <section class="no-padding" id="trimester">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
             </div>

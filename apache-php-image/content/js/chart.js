@@ -51,7 +51,7 @@ let myPieChart = new Chart(ctx2,{
       ]
   },
   options: {
-      responsive: false
+      responsive: false,
   }
 });
 
