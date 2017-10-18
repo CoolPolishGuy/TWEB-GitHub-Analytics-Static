@@ -42,15 +42,19 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right" style="
+                color: white, border-color; text-shadow: 0 0 1px black;">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#homeHeading">About</a>
                     </li>
                     <li class="">
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#reposcommits">Repos/Commits</a>
                     </li>
                     <li class="">
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#dow">Days of week</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#trimester">Trimester</a>
                     </li>
                     <li class="">
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -64,29 +68,47 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Github-analytics-Welcome</h1>
+                <h1 id="homeHeading" style="
+                color: white, border-color; text-shadow: 0 0 5px black;">Github-analytics-Welcome</h1>
                 <hr>
-                <p>Here are displayed some information about our some repository in github</p>
+                <h3 style="
+                color: white; text-shadow: 0 0 5px black;">Here are displayed some information about the most active repositories from the owner youtube on github</h3>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
     </header>
-    <CENTER>
-      <TABLE width=100% border=1 style="border-color: white;">
-        <TR>
-          <TD width=30%>
-            <ul id="list">
-              <li class="show">List item</li>
-              <li class="show">List item</li>
-              <li class="show">List item</li>
-              <li class="show">List item</li>
-            </ul>
-          </TD>
-          <TD>cel. 2</TD>
-        </TR>
-      </TABLE>
-    </CENTER>
-    <section class="no-padding" id="portfolio">
+
+    <div class="blue" id="reposcommits">
+        <section>
+            <h2>View of Information</h2>
+            <h4>We have collected some information about some of the most used repositories</h4>
+        </section>
+        <table>
+            <div>
+                <tr>
+                    <th>Name repository</th>
+                    <th>Number of commis</th>
+                </tr>           
+            </div>
+        </table>
+    </div>
+
+    <div class="yellow" id="dow">
+        <section>   
+            <h2>Commits during the days of week</h2>
+        </section>
+        <canvas class="chart" id="bar-chart"></canvas>
+    </div>    
+
+    <div class="red">
+        <section>
+           <h2>Commits during the year by trimester</h2>    
+        </section>
+        <canvas class="chart" id="pie-chart"  ></canvas>
+    </div>
+
+
+    <section class="no-padding" id="trimester">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
             </div>
@@ -111,13 +133,15 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
     <!-- custom adding data dynamic to page -->
-    <script src="js/dataSend.js"></script
+    <script src="js/dataSend.js"></script>
+    <script src="js/chart.js"></script>
 </body>
 </html>
