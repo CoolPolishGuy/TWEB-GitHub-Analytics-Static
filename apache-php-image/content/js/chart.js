@@ -2,11 +2,11 @@ function BuildChart(object) {
   const ctx = document.getElementById("canvas-bar-chart");
   const ctx2 = document.getElementById("canvas-pie-chart");
 
-
+  // retrieve the wanted information from the Json file
   const Personnaldata = object.stats.daysOfWeek;
   const Personnaldata2 = object.stats.trimester;
 
-
+  // construction of first graph
   const graph = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -24,6 +24,7 @@ function BuildChart(object) {
       responsive: false,
     }
 });
+  // construction of second graph
   const myPieChart = new Chart(ctx2,{
     type: 'pie',
     data: {
