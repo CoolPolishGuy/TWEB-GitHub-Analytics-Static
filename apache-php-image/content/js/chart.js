@@ -1,6 +1,6 @@
-function buildChart(object) {
-  const ctx = document.getElementById("bar-chart");
-  const ctx2 = document.getElementById("pie-chart");
+function BuildChart(object) {
+  const ctx = document.getElementById("canvas-bar-chart");
+  const ctx2 = document.getElementById("canvas-pie-chart");
 
 
   const Personnaldata = object.stats.daysOfWeek;
@@ -13,8 +13,8 @@ function buildChart(object) {
       labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       datasets: [
         {
-          label: "commits (unite)",
-          backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f', '#e8c3b9', '#c45850', '#c45850','#c45850'],
+          label: 'commits (unite)',
+          backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f', '#2ecc71', 'rgba(255,51,166,1.0)', '#f39c12', '#c0392b'],
           data: Personnaldata,
         }
       ]
