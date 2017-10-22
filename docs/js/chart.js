@@ -13,7 +13,7 @@ function buildChart(object) {
       labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       datasets: [
         {
-          label: "commits (unite)",
+          label: 'commits (unite)',
           backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f', '#e8c3b9', '#c45850', '#c45850','#c45850'],
           data: Personnaldata,
         }
