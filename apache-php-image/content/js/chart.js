@@ -1,3 +1,9 @@
+/**
+ * Graph builder
+ * called in dataSend.js
+ * @author Wojciech Myszkorowski
+ * @author Jérémie Zanone
+ */
 
 // eslint-disable-next-line
 function BuildChart(object) {
@@ -10,11 +16,8 @@ function BuildChart(object) {
   const Personnaldata = object.stats.daysOfWeek;
   const Personnaldata2 = object.stats.trimester;
 
-<<<<<<< HEAD
-  // eslint-disable-next-line
-=======
   // construction of first graph
->>>>>>> 8c5634676b7728f14abd75fd5015a8e08e85ad0f
+  // eslint-disable-next-line
   const graph = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -30,16 +33,12 @@ function BuildChart(object) {
     options: {
       legend: { display: false },
       responsive: false,
-<<<<<<< HEAD
     },
   });
-  // eslint-disable-next-line
-=======
-    }
-});
+
   // construction of second graph
->>>>>>> 8c5634676b7728f14abd75fd5015a8e08e85ad0f
-  const myPieChart = new Chart(ctx2,{
+  // eslint-disable-next-line
+  const myPieChart = new Chart(ctx2, {
     type: 'pie',
     data: {
       datasets: [{
