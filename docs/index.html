@@ -71,40 +71,47 @@
                 <h1 id="homeHeading" style="
                 color: white, border-color; text-shadow: 0 0 5px black;">Github-analytics-Welcome</h1>
                 <hr>
-                <h3 style="
-                color: white; text-shadow: 0 0 5px black;">Here are displayed some information about the most active repositories from the owner youtube on github</h3>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <h3 style="font-size: 35px;
+                color: white; text-shadow: 0 0 5px black;">Here are displayed some information about the most used github repositories from the owner of your choice</h3>
             </div>
+            <br>
+            <label style ="font-size: 200%; color: mediumblue;">
+                    <select onchange="changeOwner(this.value)">
+                        <option value="" selected disabled hidden>Select a Owner</option>
+                        <option value="SoftEng-HEIGVD">SoftEng-HEIGVD</option>
+                        <option value="offensive-security">Offensive-security</option>
+                        <option value="youtube">Youtube</option>
+                        <option value="nationalsecurityagency">NSA</option>
+                    </select>
+                </label>
         </div>
     </header>
 
     <div class="blue" id="reposcommits">
         <section>
             <h2>View of Information</h2>
-            <h4>We have collected some information about some of the most used repositories</h4>
+            <h3>We have collected some information about some of the most used repositories</h4>
         </section>
-        <table>
-            <div>
-                <tr>
-                    <th>Name repository</th>
-                    <th>Number of commis</th>
-                </tr>           
-            </div>
-        </table>
+        <div id="div-table"></div>
     </div>
 
     <div class="yellow" id="dow">
         <section>   
-            <h2>Commits during the days of week</h2>
+            <h1>The following graphs are based on the most committed repository</h1>
+            <h2>Commits during the days of week [last 12 months]</h2>
         </section>
-        <canvas class="chart" id="bar-chart"></canvas>
+        <div id="bar-chart">
+            <canvas class="chart" id="canvas-bar-chart"></canvas>
+        </div>
     </div>    
 
     <div class="red">
         <section>
-           <h2>Commits during the year by trimester</h2>    
+           <h2>Commits during the last 12 months by trimester</h2>    
         </section>
-        <canvas class="chart" id="pie-chart"  ></canvas>
+        <div id="pie-chart">
+            <canvas class="chart" id="canvas-pie-chart"  ></canvas>
+        </div>
     </div>
 
 
