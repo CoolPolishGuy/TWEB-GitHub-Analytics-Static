@@ -1,11 +1,22 @@
-function changeOwner(owner) {
-  $(document).ready(() => {
-    const req = new XMLHttpRequest();
+/**
+ * Generate a table with agent's infos and call a graph builder
+ * called in index.html
+ * @author Wojciech Myszkorowski
+ * @author Jérémie Zanone
+ */
 
+/* global XMLHttpRequest */
+const req = new XMLHttpRequest();
+
+// eslint-disable-next-line
+function changeOwner(owner) {
+  // eslint-disable-next-line
+  $(document).ready(() => {
     req.open('GET', `https://raw.githubusercontent.com/CoolPolishGuy/TWEB-GitHub-Analytics-Agent/master/data/data_${owner}.json`);
     req.responseType = 'json';
 
     req.onreadystatechange = () => {
+      // eslint-disable-next-line
       if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
         const object = req.response;
         $('table').remove();
@@ -26,7 +37,8 @@ function changeOwner(owner) {
         $('#canvas-pie-chart').remove();
         $('#bar-chart').append('<canvas class="chart" id="canvas-bar-chart"><canvas>');
         $('#pie-chart').append('<canvas class="chart" id="canvas-pie-chart"><canvas>');
-        new BuildChart(object);
+        /* global BuildChart */
+        BuildChart(object);
       }
     };
     req.send();
