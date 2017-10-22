@@ -6,11 +6,15 @@ function BuildChart(object) {
   // eslint-disable-next-line
   const ctx2 = document.getElementById('canvas-pie-chart');
 
-
+  // retrieve the wanted information from the Json file
   const Personnaldata = object.stats.daysOfWeek;
   const Personnaldata2 = object.stats.trimester;
 
+<<<<<<< HEAD
   // eslint-disable-next-line
+=======
+  // construction of first graph
+>>>>>>> 8c5634676b7728f14abd75fd5015a8e08e85ad0f
   const graph = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -26,9 +30,15 @@ function BuildChart(object) {
     options: {
       legend: { display: false },
       responsive: false,
+<<<<<<< HEAD
     },
   });
   // eslint-disable-next-line
+=======
+    }
+});
+  // construction of second graph
+>>>>>>> 8c5634676b7728f14abd75fd5015a8e08e85ad0f
   const myPieChart = new Chart(ctx2,{
     type: 'pie',
     data: {
